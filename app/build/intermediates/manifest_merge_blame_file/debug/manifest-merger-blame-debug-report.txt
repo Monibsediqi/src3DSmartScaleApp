@@ -1,0 +1,69 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="c0m.WildCom.Project" >
+4
+5    <uses-sdk
+6        android:minSdkVersion="14"
+6-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml
+7        android:targetSdkVersion="28" />
+7-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml
+8
+9    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+9-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:6:5-81
+9-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:6:22-78
+10
+11    <uses-feature
+11-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:8:5-10:35
+12        android:glEsVersion="0x00020000"
+12-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:9:9-41
+13        android:required="true" />
+13-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:10:9-32
+14
+15    <uses-permission android:name="android.permission.INTERNET" />
+15-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:12:5-67
+15-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:12:22-64
+16    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+16-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:13:5-80
+16-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:13:22-77
+17    <uses-permission android:name="android.permission.VIBRATE" />
+17-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:14:5-66
+17-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:14:22-63
+18
+19    <application
+19-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:16:5-34:19
+20        android:name="com.modelviewer.ModelViewerApplication"
+20-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:17:9-62
+21        android:allowBackup="true"
+21-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:18:9-35
+22        android:appComponentFactory="androidx"
+22-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:19:9-47
+23        android:debuggable="true"
+24        android:icon="@drawable/sel"
+24-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:20:9-37
+25        android:label="3D SEL V0.3.1"
+25-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:21:9-38
+26        android:theme="@style/AppTheme" >
+26-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:22:9-40
+27        <activity
+27-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:24:9-33:20
+28            android:name="com.modelviewer.StartActivity"
+28-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:25:13-57
+29            android:configChanges="orientation" >
+29-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:26:13-48
+30            <intent-filter>
+30-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:27:13-32:29
+31                <action android:name="android.intent.action.MAIN" />
+31-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:28:17-69
+31-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:28:25-66
+32
+33                <category android:name="android.intent.category.LAUNCHER" />
+33-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:30:17-77
+33-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:30:27-74
+34                <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER" />
+34-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:31:17-89
+34-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:31:27-86
+35            </intent-filter>
+36        </activity>
+37    </application>
+38
+39</manifest>

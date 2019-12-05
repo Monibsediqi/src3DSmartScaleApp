@@ -1,0 +1,73 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+* Build.bat
+* Makefile
+* Wrappers.iml
+* build.xml
+* doc\
+* doc\common-issues.html
+* doc\getting-started.html
+* doc\images\
+* doc\images\adb-devices.png
+* doc\images\allow-USB-access.png
+* doc\images\blank-screen.png
+* doc\images\eclipse-run-app.png
+* doc\images\enable-USB-debugging.png
+* doc\images\enable-unknown-sources.png
+* doc\images\import-existing-projects.png
+* doc\images\import-projects.png
+* doc\images\install-apk.png
+* doc\images\niviewer.png
+* doc\images\select-simple-viewer.png
+* doc\images\select-workspace.png
+* doc\images\simple-read.png
+* doc\images\simple-viewer.png
+* doc\images\start-import.png
+* doc\images\switch-workspace.png
+* doc\images\welcome.png
+* doc\overview.html
+* proguard-project.txt
+* sh.exe.stackdump
+* us.stackdump
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's h:
+ow the projects were restructured
+* AndroidManifest.xml => OpenNIForAndroid\src\main\AndroidManifest.xml
+* assets\ => OpenNIForAndroid\src\main\assets
+* jni\ => OpenNIForAndroid\src\main\jni\
+* libs\armeabi-v7a\libOniFile.so => OpenNIForAndroid\src\main\jniLibs\armeabi-v7a\libOniFile.so
+* libs\armeabi-v7a\libOpenNI2.jni.so => OpenNIForAndroid\src\main\jniLibs\armeabi-v7a\libOpenNI2.jni.so
+* libs\armeabi-v7a\libOpenNI2.so => OpenNIForAndroid\src\main\jniLibs\armeabi-v7a\libOpenNI2.so
+* libs\armeabi-v7a\libPS1080.so => OpenNIForAndroid\src\main\jniLibs\armeabi-v7a\libPS1080.so
+* libs\armeabi-v7a\libPSLink.so => OpenNIForAndroid\src\main\jniLibs\armeabi-v7a\libPSLink.so
+* libs\armeabi-v7a\libusb.so => OpenNIForAndroid\src\main\jniLibs\armeabi-v7a\libusb.so
+* res\ => OpenNIForAndroid\src\main\res\
+* src\ => OpenNIForAndroid\src\main\java\
+* src\org\slf4j\helpers\package.html => OpenNIForAndroid\src\main\resources\org\slf4j\helpers\package.html
+* src\org\slf4j\impl\package.html => OpenNIForAndroid\src\main\resources\org\slf4j\impl\package.html
+* src\org\slf4j\spi\package.html => OpenNIForAndroid\src\main\resources\org\slf4j\spi\package.html
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)

@@ -1,0 +1,4 @@
+#Mon Nov 11 11:32:09 KST 2019
+base.0=C\:\\Users\\korea\\StudioProjects\\modelviewer3d\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

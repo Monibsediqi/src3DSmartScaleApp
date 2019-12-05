@@ -1,0 +1,28 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\korea\\StudioProjects\\modelviewer3d\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v19\\values-v19.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\korea\\StudioProjects\\modelviewer3d\\app\\src\\main\\res\\values-v19\\styles.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "4",
+                        "startOffsets": "97",
+                        "endLines": "7",
+                        "endColumns": "12",
+                        "endOffsets": "214"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "169"
+                    }
+                }
+            ]
+        }
+    ]
+}

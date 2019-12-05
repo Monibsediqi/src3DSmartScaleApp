@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">3D Sel</string>
+    <string name="load_sample">Load sample</string>
+    <string name="read_permission_failed">Please allow read permission to open model files.</string>
+    <string name="waiting_for_frames">Waiting for frames&#8230;</string>
+    <string name="visualize">Visualize</string>
+</resources>
