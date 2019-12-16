@@ -4,10 +4,7 @@
     package="c0m.WildCom.Project">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-
-    <uses-feature
-        android:glEsVersion="0x00020000"
-        android:required="true" />
+    <uses-feature android:glEsVersion="0x00020000" android:required="true" />
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -21,8 +18,10 @@
         android:label="3D SEL V0.3.1"
         android:theme="@style/AppTheme"
         tools:replace="android:appComponentFactory">
-        <activity
-            android:name="com.modelviewer.StartActivity"
+
+        <activity android:name="com.modelviewer.StartActivity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateAlwaysHidden"
             android:configChanges="orientation">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -31,6 +30,11 @@
                 <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.modelviewer.MainActivity"
+            android:screenOrientation="landscape"
+            android:configChanges="orientation"
+            android:parentActivityName="com.modelviewer.StartActivity" />
     </application>
 
 </manifest>

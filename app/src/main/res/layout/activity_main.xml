@@ -1,65 +1,261 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/container_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorWindowBackground"
-    tools:context="com.modelviewer.MainActivity">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:baselineAligned="false">
 
-    <Button
-        android:id="@+id/load"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="7dp"
-        android:text="Load File" />
-
-    <EditText
-        android:id="@+id/search"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <RelativeLayout
+        android:id="@+id/relative_layout1"
+        android:layout_width="500dp"
+        android:layout_height="300dp"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="38dp"
-        android:layout_marginTop="7dp"
-        android:layout_marginRight="-4dp"
-        android:layout_toRightOf="@+id/load"
-        android:ems="10" />
+        android:paddingBottom="8dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="8dp"
+        android:layout_alignParentLeft="true">
+        <com.jjoe64.graphview.GraphView
+            android:id="@+id/graph"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </RelativeLayout>
 
-    <TextView
-        android:id="@+id/WeightTxtView"
-        android:layout_width="264dp"
-        android:layout_height="wrap_content"
-
-        android:layout_alignLeft="@+id/search"
-        android:layout_alignTop="@+id/compute"
-        android:layout_alignBottom="@+id/compute"
-        android:layout_alignParentRight="true"
-        android:layout_marginLeft="36dp"
-
-        android:layout_marginTop="-5dp"
-        android:layout_marginRight="22dp"
-        android:layout_marginBottom="5dp"
-        android:text="Weight1 here"
-        android:textColor="#ddd"
-        android:textSize="22sp" />
-
-    <Button
-        android:id="@+id/compute"
-        android:layout_width="119dp"
-        android:layout_height="wrap_content"
-
-        android:layout_alignParentLeft="true"
+    <RelativeLayout
+        android:id="@+id/relative_layout2"
+        android:layout_width="500dp"
+        android:layout_height="200dp"
+        android:layout_below="@+id/relative_layout1"
+        android:background="@color/colorPrimaryLight"
+        android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
+        android:paddingBottom="8dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="8dp"
+        android:layout_alignParentLeft="true">
 
-        android:layout_marginLeft="10dp"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical">
 
-        android:layout_marginRight="-4dp"
-        android:layout_marginBottom="16dp"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimaryDark"
+                android:orientation="vertical"
+                android:padding="5dp">
 
-        android:layout_toLeftOf="@+id/WeightTxtView"
-        android:text="Weight" />
+                <TextView
+                    android:id="@+id/text_view_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/pig_view_detail"
+                    android:textColor="@color/colorIconText"
+                    android:textSize="28sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@color/colorPrimaryText"
+                android:orientation="vertical"
+                android:padding="5dp">
+                <!--                view_detail_sample-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/caputer_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text="@string/capturer_date"
+                        android:textColor="@color/colorIconText"
+                        android:textSize="22sp" />
+
+                    <TextView
+                        android:id="@+id/text_view_date_details"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text=""
+                        android:textColor="@color/colorIconText"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text="Weight ShortFall:"
+                        android:textColor="@color/colorIconText"
+                        android:textSize="22sp" />
+
+                    <TextView
+                        android:id="@+id/text_view_weight_shortfall"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:textColor="@color/red"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/detail_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text="Selling Point:"
+                        android:textColor="@color/colorIconText"
+                        android:textSize="22sp" />
+
+                    <TextView
+                        android:id="@+id/text_view_shipment_weight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text="115 Kg"
+                        android:textColor="@color/colorIconText"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text="Ready for Sale:"
+                        android:textColor="@color/colorIconText"
+                        android:textSize="22sp" />
+
+                    <TextView
+                        android:id="@+id/text_view_ready_for_sale"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text=" "
+                        android:textColor="@color/red"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text="Food Required"
+                        android:textColor="@color/colorIconText"
+                        android:textSize="22sp" />
+
+                    <TextView
+                        android:id="@+id/text_view_required_food"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text=" "
+                        android:textColor="@color/colorIconText"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative_layout3"
+        android:layout_width="465dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="-5dp"
+        android:layout_marginLeft="-5dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_toEndOf="@id/relative_layout1"
+        android:layout_toRightOf="@id/relative_layout1"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/text_view_10_recent_pig"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@color/colorPrimaryDark"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="List of Scanned Pigs"
+            android:textColor="@color/colorIconText"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_view_10_recent_pig"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorIconText"
+            android:baselineAligned="true"
+            android:divider="@color/colorSecondText"
+            android:orientation="horizontal"
+            android:padding="2dp"
+            tools:listitem="@layout/pig_item">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </RelativeLayout>
 
 </RelativeLayout>

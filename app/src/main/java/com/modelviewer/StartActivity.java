@@ -1,7 +1,6 @@
 
 package com.modelviewer;
 
-import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -13,7 +12,6 @@ import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 
 import org.openni.Device;
@@ -27,7 +25,6 @@ import org.openni.VideoStream;
 import org.openni.android.OpenNIHelper;
 import org.openni.android.OpenNIView;
 
-import java.io.IOException;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
@@ -66,30 +63,31 @@ public class StartActivity extends Activity implements OpenNIHelper.DeviceOpenLi
 		OpenNI.initialize();
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_simple_viewer);
-		mFrameView = (OpenNIView) findViewById(R.id.frameView);
-		mStatusLine = (TextView) findViewById(R.id.status_line);
-		Button scan = (Button) findViewById(R.id.button1);
-		final EditText mEdit = (EditText) findViewById(R.id.editText1);
-		final Button displayBtn = (Button)findViewById(R.id.display);
-		exec_time = (TextView) findViewById(R.id.Execution_time);
+		mFrameView =  findViewById(R.id.frameView);
+		mStatusLine =  findViewById(R.id.status_line);
+		Button scan = findViewById(R.id.scanButton);
+		final Button displayBtn = findViewById(R.id.visualizeButton);
 
-		scan.setOnClickListener(new OnClickListener() {
+		scan.setOnClickListener((View view) -> new OnClickListener() {
 			@Override
 			public void onClick(View view) {
 				flag = 1;
-				if (mEdit.getText().toString()!=null)
-					name = mEdit.getText().toString();
-				else
-					name = "output";
+				name = "output";
 			}
 			});
+		scan.setOnClickListener((View view) -> setFlagandName());
 
-
+		displayBtn.setOnClickListener((View v) -> startSecondActivity());
 		}
-		public void visualizePigInfo(View view){
-		Intent secondActivity = new Intent(this, MainActivity.class);
-		secondActivity.putExtra("name" , name);
-		startActivity(secondActivity);
+
+		private void setFlagandName(){
+		flag = 1;
+		name = "output";
+		}
+
+	private void startSecondActivity(){
+		Intent data = new Intent(StartActivity.this, MainActivity.class);
+		startActivity(data);
 	}
 
 
@@ -122,16 +120,6 @@ public class StartActivity extends Activity implements OpenNIHelper.DeviceOpenLi
 
 		mDeviceOpenPending = true;
 		mOpenNIHelper.requestDeviceOpen(uri, this);
-	}
-
-	@SuppressLint("NewApi")
-	public void visualize_pointCloud(View view) throws IOException {
-
-
-		Intent intent = new Intent(view.getContext(),MainActivity.class);
-		intent.putExtra("name", name);
-
-		startActivity(intent);
 	}
 
 	private void showAlertAndExit(String message) {

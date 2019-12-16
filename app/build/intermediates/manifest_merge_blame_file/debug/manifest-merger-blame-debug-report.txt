@@ -1,69 +1,97 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-3    package="c0m.WildCom.Project" >
-4
-5    <uses-sdk
-6        android:minSdkVersion="14"
-6-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml
-7        android:targetSdkVersion="28" />
-7-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml
-8
-9    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-9-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:6:5-81
-9-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:6:22-78
+3    package="c0m.WildCom.Project"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="16"
+8-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="28" />
+9-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml
 10
-11    <uses-feature
-11-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:8:5-10:35
-12        android:glEsVersion="0x00020000"
-12-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:9:9-41
-13        android:required="true" />
-13-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:10:9-32
-14
-15    <uses-permission android:name="android.permission.INTERNET" />
-15-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:12:5-67
-15-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:12:22-64
-16    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-16-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:13:5-80
-16-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:13:22-77
-17    <uses-permission android:name="android.permission.VIBRATE" />
-17-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:14:5-66
-17-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:14:22-63
-18
-19    <application
-19-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:16:5-34:19
-20        android:name="com.modelviewer.ModelViewerApplication"
-20-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:17:9-62
-21        android:allowBackup="true"
-21-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:18:9-35
-22        android:appComponentFactory="androidx"
-22-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:19:9-47
-23        android:debuggable="true"
-24        android:icon="@drawable/sel"
-24-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:20:9-37
-25        android:label="3D SEL V0.3.1"
-25-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:21:9-38
-26        android:theme="@style/AppTheme" >
-26-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:22:9-40
-27        <activity
-27-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:24:9-33:20
-28            android:name="com.modelviewer.StartActivity"
-28-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:25:13-57
-29            android:configChanges="orientation" >
-29-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:26:13-48
-30            <intent-filter>
-30-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:27:13-32:29
-31                <action android:name="android.intent.action.MAIN" />
-31-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:28:17-69
-31-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:28:25-66
-32
-33                <category android:name="android.intent.category.LAUNCHER" />
-33-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:30:17-77
-33-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:30:27-74
-34                <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER" />
-34-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:31:17-89
-34-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:31:27-86
-35            </intent-filter>
-36        </activity>
-37    </application>
-38
-39</manifest>
+11    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+11-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:6:5-81
+11-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:6:22-78
+12
+13    <uses-feature
+13-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:7:5-78
+14        android:glEsVersion="0x00020000"
+14-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:7:19-51
+15        android:required="true" />
+15-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:7:52-75
+16
+17    <uses-permission android:name="android.permission.INTERNET" />
+17-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:9:5-67
+17-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:9:22-64
+18    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+18-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:10:5-80
+18-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:10:22-77
+19    <uses-permission android:name="android.permission.VIBRATE" />
+19-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:11:5-66
+19-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:11:22-63
+20
+21    <application
+21-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:13:5-38:19
+22        android:name="com.modelviewer.ModelViewerApplication"
+22-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:14:9-62
+23        android:allowBackup="true"
+23-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:15:9-35
+24        android:appComponentFactory="androidx"
+24-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:16:9-47
+25        android:debuggable="true"
+26        android:icon="@drawable/sel"
+26-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:17:9-37
+27        android:label="3D SEL V0.3.1"
+27-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:18:9-38
+28        android:testOnly="true"
+29        android:theme="@style/AppTheme" >
+29-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:19:9-40
+30        <activity
+30-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:22:9-32:20
+31            android:name="com.modelviewer.StartActivity"
+31-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:22:19-63
+32            android:configChanges="orientation"
+32-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:25:13-48
+33            android:screenOrientation="landscape"
+33-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:23:13-50
+34            android:windowSoftInputMode="stateAlwaysHidden" >
+34-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:24:13-60
+35            <intent-filter>
+35-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:26:13-31:29
+36                <action android:name="android.intent.action.MAIN" />
+36-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:27:17-69
+36-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:27:25-66
+37
+38                <category android:name="android.intent.category.LAUNCHER" />
+38-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:29:17-77
+38-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:29:27-74
+39                <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER" />
+39-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:30:17-89
+39-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:30:27-86
+40            </intent-filter>
+41        </activity>
+42        <activity
+42-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:33:9-37:74
+43            android:name="com.modelviewer.MainActivity"
+43-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:34:13-56
+44            android:configChanges="orientation"
+44-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:36:13-48
+45            android:parentActivityName="com.modelviewer.StartActivity"
+45-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:37:13-71
+46            android:screenOrientation="landscape" />
+46-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:35:13-50
+47
+48        <provider
+48-->[android.arch.lifecycle:extensions:1.1.1] C:\Users\korea\.gradle\caches\transforms-2\files-2.1\0319b019d62b322e5e3e8b69d1380784\extensions-1.1.1\AndroidManifest.xml:23:9-27:43
+49            android:name="android.arch.lifecycle.ProcessLifecycleOwnerInitializer"
+49-->[android.arch.lifecycle:extensions:1.1.1] C:\Users\korea\.gradle\caches\transforms-2\files-2.1\0319b019d62b322e5e3e8b69d1380784\extensions-1.1.1\AndroidManifest.xml:24:13-83
+50            android:authorities="c0m.WildCom.Project.lifecycle-trojan"
+50-->[android.arch.lifecycle:extensions:1.1.1] C:\Users\korea\.gradle\caches\transforms-2\files-2.1\0319b019d62b322e5e3e8b69d1380784\extensions-1.1.1\AndroidManifest.xml:25:13-68
+51            android:exported="false"
+51-->[android.arch.lifecycle:extensions:1.1.1] C:\Users\korea\.gradle\caches\transforms-2\files-2.1\0319b019d62b322e5e3e8b69d1380784\extensions-1.1.1\AndroidManifest.xml:26:13-37
+52            android:multiprocess="true" />
+52-->[android.arch.lifecycle:extensions:1.1.1] C:\Users\korea\.gradle\caches\transforms-2\files-2.1\0319b019d62b322e5e3e8b69d1380784\extensions-1.1.1\AndroidManifest.xml:27:13-40
+53    </application>
+54
+55</manifest>

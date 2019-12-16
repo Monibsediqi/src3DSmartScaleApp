@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="c0m.WildCom.Project" >
+    package="c0m.WildCom.Project"
+    android:versionCode="1"
+    android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="14"
+        android:minSdkVersion="16"
         android:targetSdkVersion="28" />
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -23,10 +25,13 @@
         android:debuggable="true"
         android:icon="@drawable/sel"
         android:label="3D SEL V0.3.1"
+        android:testOnly="true"
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.modelviewer.StartActivity"
-            android:configChanges="orientation" >
+            android:configChanges="orientation"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateAlwaysHidden" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -34,6 +39,17 @@
                 <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.modelviewer.MainActivity"
+            android:configChanges="orientation"
+            android:parentActivityName="com.modelviewer.StartActivity"
+            android:screenOrientation="landscape" />
+
+        <provider
+            android:name="android.arch.lifecycle.ProcessLifecycleOwnerInitializer"
+            android:authorities="c0m.WildCom.Project.lifecycle-trojan"
+            android:exported="false"
+            android:multiprocess="true" />
     </application>
 
 </manifest>

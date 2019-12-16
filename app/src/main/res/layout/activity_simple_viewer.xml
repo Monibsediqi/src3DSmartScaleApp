@@ -3,8 +3,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical"
-    android:keepScreenOn="true"
-    tools:context=".SimpleViewerActivity" >
+    android:keepScreenOn="true">
 
     <TextView
         android:id="@+id/status_line"
@@ -13,7 +12,7 @@
         android:layout_alignParentBottom="true"
         android:gravity="center"
         android:text="@string/waiting_for_frames" />
-    
+
     <org.openni.android.OpenNIView
         android:id="@+id/frameView"
         android:layout_width="wrap_content"
@@ -22,52 +21,23 @@
         android:layout_centerHorizontal="true" />
 
     <Button
-        android:id="@+id/display"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/frameView"
-        android:layout_alignBottom="@+id/frameView"
-        android:layout_alignParentRight="true"
-        android:onClick="visualizePigInfo"
+        android:id="@+id/visualizeButton"
+        android:textSize="11sp"
+        android:layout_width="80sp"
+        android:layout_height="80sp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true"
         android:text="@string/visualize" />
 
-    <EditText
-        android:id="@+id/editText1"
-        android:layout_width="216dp"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/display"
-        android:layout_alignParentLeft="true"
-        android:layout_marginRight="117dp"
-        android:layout_toLeftOf="@+id/display"
-        android:ems="10"
-        android:inputType="textPersonName" />
-
     <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/editText1"
-        android:layout_alignBottom="@+id/editText1"
+        android:id="@+id/scanButton"
+        android:layout_width="80sp"
+        android:layout_height="80sp"
+        android:textSize="11sp"
         android:layout_alignParentRight="true"
-        android:layout_toRightOf="@+id/editText1"
-        android:onClick="scan"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="14dp"
         android:text="Scan" />
 
-    <TextView
-        android:id="@+id/Execution_time"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/button1"
-        android:text="Execution Time"
-        android:textColor="#FF0000"
-        android:textSize="18dp" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button" />
 
 </RelativeLayout>
