@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -33,8 +34,8 @@ public class PigAdapter extends RecyclerView.Adapter <PigAdapter.PigHolder>{
     public void onBindViewHolder(@NonNull PigHolder holder, int position) {
        try {
            PigTable currentPig = pigTables.get(position);
-           holder.pigName.setText(currentPig.getPigName());
-           String string = String.valueOf((currentPig.getWeight()));
+           holder.pigName.setText("Pig " + (currentPig.getPigNumber()));
+           String string = new DecimalFormat("##.#").format(currentPig.getWeight());
            String stringr = new StringBuilder().append(string).append(" KG").toString();
            holder.weight.setText(stringr);
            holder.dateAndTime.setText(String.valueOf(currentPig.getDateAndTime()));

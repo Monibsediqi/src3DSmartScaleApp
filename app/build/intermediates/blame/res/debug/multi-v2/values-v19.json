@@ -6,37 +6,17 @@
                 {
                     "source": "C:\\Users\\korea\\StudioProjects\\modelviewer3d\\app\\src\\main\\res\\values-v19\\styles.xml",
                     "from": {
-                        "startLines": "8,3",
-                        "startColumns": "4,2",
-                        "startOffsets": "213,52",
-                        "endLines": "13,6",
-                        "endColumns": "12,12",
-                        "endOffsets": "527,171"
+                        "startLines": "-1,-1",
+                        "startColumns": "-1,-1",
+                        "startOffsets": "-1,-1"
                     },
                     "to": {
-                        "startLines": "23,29",
+                        "startLines": "2,8",
                         "startColumns": "4,4",
-                        "startOffsets": "1157,1476",
-                        "endLines": "28,32",
+                        "startOffsets": "55,339",
+                        "endLines": "7,11",
                         "endColumns": "12,12",
-                        "endOffsets": "1471,1595"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\korea\\StudioProjects\\modelviewer3d\\app\\src\\main\\res\\values-v19\\string.xml",
-                    "from": {
-                        "startLines": "1,21,14,18,12,20,2,7,10,9,11,8,6,17,13,16,15,3,19,5,4",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "17,1100,712,923,611,1035,62,383,517,474,562,430,340,877,665,812,766,115,977,291,217",
-                        "endColumns": "43,44,52,52,52,63,51,45,43,41,47,42,41,44,45,63,44,100,56,47,72",
-                        "endOffsets": "56,1140,760,971,659,1094,109,424,556,511,605,468,377,917,706,871,806,211,1029,334,285"
-                    },
-                    "to": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,99,144,197,250,303,367,419,465,509,551,599,642,684,729,775,839,884,985,1042,1090",
-                        "endColumns": "43,44,52,52,52,63,51,45,43,41,47,42,41,44,45,63,44,100,56,47,66",
-                        "endOffsets": "94,139,192,245,298,362,414,460,504,546,594,637,679,724,770,834,879,980,1037,1085,1152"
+                        "endOffsets": "334,423"
                     }
                 }
             ]

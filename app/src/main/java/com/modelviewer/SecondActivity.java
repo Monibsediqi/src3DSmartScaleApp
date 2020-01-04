@@ -17,6 +17,7 @@ import com.jjoe64.graphview.GraphView;
 import com.jjoe64.graphview.series.DataPoint;
 import com.jjoe64.graphview.series.LineGraphSeries;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,17 +29,17 @@ import smartscaledatabase.PigViewModel;
 
 import static java.lang.StrictMath.abs;
 
-public class MainActivity extends AppCompatActivity implements PigAdapter.OnItemListener {
+public class SecondActivity extends AppCompatActivity implements PigAdapter.OnItemListener {
 
 
     public static final String TAG = "Main Activity";
     private PigViewModel pigViewModel;
     private GraphView graphView;
-    private PigTable pigTable = new PigTable("", 0, 0, 0);
-    private double SHIPMENT_WEIGHT = 120;
+    private PigTable pigTable = new PigTable(0, 0, 0, "");
+    private double SHIPMENT_WEIGHT = 115;
     private List<PigTable> pigTables = new ArrayList<>();
-    PigTable currentPig;
-    PigMath pigMath = new PigMath();
+    private PigTable currentPig;
+    private PigMath pigMath = new PigMath();
 
     TextView weightShortFallTextView, shipmentWeightTextView,pigDetailsTextView, scannedDateTextView2;
     TextView readyForSaleView, foodRequiredView;
@@ -51,20 +52,30 @@ public class MainActivity extends AppCompatActivity implements PigAdapter.OnItem
 //    int priority = extras.getInt(AddDataActivity.EXTRA_PRIORITY, 1);
 
     LineGraphSeries<DataPoint> series = new LineGraphSeries<>(new DataPoint[]{
-            new DataPoint(17,0),
-            new DataPoint(45,20),
-            new DataPoint(73,40),
-            new DataPoint(101,60),
-            new DataPoint(129,80),
-            new DataPoint(157,100),
-            new DataPoint(172,120),
-            new DataPoint(199,140),
-            new DataPoint(217,160),
+//            new DataPoint(17,0),
+//            new DataPoint(45,20),
+//            new DataPoint(73,40),
+//            new DataPoint(101,60),
+//            new DataPoint(129,80),
+//            new DataPoint(157,100),
+//            new DataPoint(172,120),
+//            new DataPoint(199,140),
+//            new DataPoint(217,160),
+
+            new DataPoint(0,0),
+            new DataPoint(1,1),
+            new DataPoint(2,2),
+            new DataPoint(3,3),
+            new DataPoint(4,4),
+            new DataPoint(5,5),
+            new DataPoint(6,5),
+            new DataPoint(7,4),
+            new DataPoint(8,3),
     });
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.seond_activity);
         RecyclerView recyclerView = findViewById(R.id.recycler_view);
         graphView = findViewById(R.id.graph);
         weightShortFallTextView = findViewById(R.id.text_view_weight_shortfall);
@@ -91,12 +102,11 @@ public class MainActivity extends AppCompatActivity implements PigAdapter.OnItem
         });
     }
 
-
     private void runGraphView(){
-        graphView.setTitle("Pig Growth");
+        graphView.setTitle((String) getText(R.string.graph_title));
         graphView.setTitleTextSize(34);
-        graphView.getGridLabelRenderer().setVerticalAxisTitle("Weight(Kg)");
-        graphView.getGridLabelRenderer().setHorizontalAxisTitle("Days");
+        graphView.getGridLabelRenderer().setVerticalAxisTitle((String) getText(R.string.y_axis));
+        graphView.getGridLabelRenderer().setHorizontalAxisTitle((String) getText(R.string.x_axis));
         graphView.setPadding(0,0,8,0);
         graphView.getViewport().setMinX(17);
         graphView.getViewport().setMaxX(217);
@@ -120,31 +130,52 @@ public class MainActivity extends AppCompatActivity implements PigAdapter.OnItem
 
     @Override
     public void onItemClick(int position) {
+
+        double weightShortFallValue, ready_for_sale;
+        int ready_for_s, requiredFood;
         int pos = position;
         Log.d(TAG, "onItemClick: Clicked." + pos);
 
         pigTable = pigViewModel.getPig(pos);
-        String pigName = pigTable.getPigName();
+        int pigName = pigTable.getPigNumber();
         double pigWeight = pigTable.getWeight();
-        int dateAndTime = pigTable.getDateAndTime();
+        String dateAndTime = pigTable.getDateAndTime();
 
         /*
         TODO:
-        1- Handle exception if the weight exceeds the shipment weight
-        2- handle exception if the days left for sale exceeds the limit
+        1- Add fragment to get the user input on the first run of the app
+        2- Add update and delete feature of the database (On slide to left delete the data)
         3- On the first run of the app display and editText view so that user enter shipment weight for their pigs
          */
-        double weightShortFallValue = SHIPMENT_WEIGHT - pigWeight;
-        double ready_for_sale = abs(pigMath.getAgeInDays(pigWeight) - 161);
 
-        int ready_for_s = (int) ready_for_sale;
-        Log.d(TAG, "Date and Time " + dateAndTime);
-        weightShortFallTextView.setText((weightShortFallValue + "Kg"));
-        readyForSaleView.setText((ready_for_s + " Days Left"));
-        pigDetailsTextView.setText(("Details of " + pigName ));
-        scannedDateTextView2.setText(String.valueOf(dateAndTime));
-        int requiredFood = (int) (pigMath.estimateReqFood());
-        foodRequiredView.setText(String.valueOf(requiredFood));
+        weightShortFallValue = SHIPMENT_WEIGHT - pigWeight;
+        ready_for_sale = abs(pigMath.getAgeInDays(pigWeight) - 161);
+        ready_for_s = (int) ready_for_sale;
+
+        if (weightShortFallValue > 0 ){
+            String wsf = new DecimalFormat("##.#").format(weightShortFallValue);
+            weightShortFallTextView.setText((wsf + getText(R.string.wight_left) + "KG"));
+            weightShortFallTextView.setText((wsf + getText(R.string.wight_left)));
+            shipmentWeightTextView.setText((SHIPMENT_WEIGHT + " KG"));
+
+            readyForSaleView.setText((ready_for_s + (String) getText(R.string.days_left)));
+            pigDetailsTextView.setText(getText(R.string.pig_details) + String.valueOf(pigName));
+            scannedDateTextView2.setText(String.valueOf(dateAndTime));
+            requiredFood = (int) (pigMath.estimateReqFood());
+            foodRequiredView.setText(String.valueOf(requiredFood));
+        }
+
+        else {
+
+            shipmentWeightTextView.setText((SHIPMENT_WEIGHT + " KG"));
+
+            pigDetailsTextView.setText(getText(R.string.pig_details) + String.valueOf(pigName));
+            scannedDateTextView2.setText(String.valueOf(dateAndTime));
+
+            readyForSaleView.setText(getText(R.string.ready_to_sell));
+            weightShortFallTextView.setText(getText(R.string.ready_to_sell));
+            foodRequiredView.setText(String.valueOf(0));
+        }
 
     }
 }

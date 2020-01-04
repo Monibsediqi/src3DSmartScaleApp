@@ -14,9 +14,14 @@ public interface PigDao {
     void insert(PigTable pigTable);
 
     @Query("SELECT * FROM pig_table ORDER BY priority ASC")
-    public LiveData<List<PigTable>> getAllPigs();
+    LiveData<List<PigTable>> getAllPigs();
 
 
-    @Query("select * from pig_table where priority = :priority")
-    public PigTable getPig(int priority);
+    @Query("select * from pig_table where priority= :priority")
+    PigTable getPig(int priority);
+
+    @Query("SELECT COUNT(pigNumber) FROM pig_table")
+    LiveData<Integer> getItemCount();
+
+
 }

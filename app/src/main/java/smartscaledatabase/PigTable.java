@@ -10,39 +10,40 @@ import android.support.annotation.NonNull;
 @Entity(tableName = "pig_table")
 public class PigTable {
 
+
     @PrimaryKey(autoGenerate = true)
-    private int id;
+    private int id =0;
 
     @ColumnInfo(name = "priority")
     @NonNull
-    private int priority;
+    private int priority ;
 
     @ColumnInfo(name = "pig_weight")
     @NonNull
     private double weight;
 
-    @ColumnInfo(name = "pigName")
+    @ColumnInfo(name = "pigNumber")
     @NonNull
-    private String pigName;
+    private int pigNumber;
 
-    private int dateAndTime;
+    private String dateAndTime;
 
 
-    public PigTable(String pigName, double weight, int priority, int dateAndTime) {
-        this.pigName = pigName;
+    public PigTable(int pigNumber, double weight, int priority, String dateAndTime) {
+        this.pigNumber = pigNumber;
         this.weight = weight;
         this.priority = priority;
         this.dateAndTime = dateAndTime;
     }
-    public int getDateAndTime(){
+    public String getDateAndTime(){
         return this.dateAndTime;
     }
     public int getPriority() { return this.priority; }
 
     public double getWeight() { return this.weight; }
 
-    public String getPigName() { return this.pigName; }
+    public int getPigNumber() { return this.pigNumber; }
 
-    public void setId(int id) { this.id = id; }
-    public int getId(){return this.id; }
+    public int getId(){return this.id;}
+    public void  setId(int id) {this.id = id;}
 }

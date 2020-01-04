@@ -1,5 +1,11 @@
 package utilities;
 
+import android.support.annotation.NonNull;
+
+import org.openni.CoordinateConverter;
+import org.openni.VideoFrameRef;
+import org.openni.VideoStream;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileOutputStream;
@@ -11,17 +17,12 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
-import org.openni.CoordinateConverter;
-import org.openni.VideoFrameRef;
-import org.openni.VideoStream;
-
 import algorithms.Dbscan;
 import algorithms.PCA;
 import algorithms.PCA_opt;
 import algorithms.dbscanner;
 import algorithms.ransac;
 import algorithms.ransac.Support;
-import android.support.annotation.NonNull;
 import geometrypack.Plane;
 import geometrypack.Vector;
 import patterns.cluster.DoubleArray;
@@ -263,10 +264,21 @@ public class Utilities {
 		
 //		float G2 = ((girth_distance/5)); 
 
-
 		return (float)((0.8*(-0.3872587127 * G + 0.1281524568 * length+ 137.33234145))
 				+ 0.2*((10.1709* G *0.393701-205.7492)*0.453592));
-//		
+	}
+
+	public static List<Vector> cloudArrayToVector(List<DoubleArray> cloud){
+		float x,y,z;
+		List<Vector> vectorCloud = new ArrayList<Vector>();
+
+		for (int i = 0; i<cloud.size(); ++i) {
+			x = (float) cloud.get(i).data[0];
+			y = (float) cloud.get(i).data[1];
+			z = (float) cloud.get(i).data[2];
+			vectorCloud.add(new Vector(x,y,z));
+		}
+		return  vectorCloud;
 	}
 	class SortbyZ implements Comparator<Vector> 
 	{ 

@@ -125,8 +125,8 @@ public class Util {
 	}
 	class SortbyX implements Comparator<Vector> 
 	{ 
-	    // Used for sorting in ascending order of 
-	    // roll number 
+	    // Used for sorting in ascending order of
+		//		//	    // roll number
 	    public int compare(Vector a, Vector b) 
 	    { 
 	        return (int) (a.getX() - b.getX()); 

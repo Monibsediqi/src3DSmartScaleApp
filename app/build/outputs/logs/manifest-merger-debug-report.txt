@@ -5,7 +5,7 @@ INJECTED from C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidMa
 INJECTED from C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:2:1-40:12
 INJECTED from C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:2:1-40:12
 MERGED from [:OpenNIForAndroid] C:\Users\korea\StudioProjects\modelviewer3d\OpenNIForAndroid\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
-MERGED from [com.android.support.constraint:constraint-layout:2.0.0-beta3] C:\Users\korea\.gradle\caches\transforms-2\files-2.1\cfd8d0ba7df86300aa4cdfc1e95c4d98\constraint-layout-2.0.0-beta3\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support.constraint:constraint-layout:2.0.0-beta4] C:\Users\korea\.gradle\caches\transforms-2\files-2.1\5b043de63029f121da17deed147c51b4\constraint-layout-2.0.0-beta4\AndroidManifest.xml:2:1-11:12
 MERGED from [com.android.support:design:28.0.0] C:\Users\korea\.gradle\caches\transforms-2\files-2.1\e3decd5bf9fbc8536b88bb6c57360e20\design-28.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.android.support:mediarouter-v7:28.0.0] C:\Users\korea\.gradle\caches\transforms-2\files-2.1\934b93246aefd01a74000b93cc612c1e\mediarouter-v7-28.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\korea\.gradle\caches\transforms-2\files-2.1\bbf07aa1da9ab954374e693dfcc335b9\appcompat-v7-28.0.0\AndroidManifest.xml:17:1-22:12
@@ -88,8 +88,8 @@ ADDED from C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManif
 		ADDED from C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:11:22-63
 application
 ADDED from C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:13:5-38:19
-MERGED from [com.android.support.constraint:constraint-layout:2.0.0-beta3] C:\Users\korea\.gradle\caches\transforms-2\files-2.1\cfd8d0ba7df86300aa4cdfc1e95c4d98\constraint-layout-2.0.0-beta3\AndroidManifest.xml:9:5-20
-MERGED from [com.android.support.constraint:constraint-layout:2.0.0-beta3] C:\Users\korea\.gradle\caches\transforms-2\files-2.1\cfd8d0ba7df86300aa4cdfc1e95c4d98\constraint-layout-2.0.0-beta3\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:2.0.0-beta4] C:\Users\korea\.gradle\caches\transforms-2\files-2.1\5b043de63029f121da17deed147c51b4\constraint-layout-2.0.0-beta4\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:2.0.0-beta4] C:\Users\korea\.gradle\caches\transforms-2\files-2.1\5b043de63029f121da17deed147c51b4\constraint-layout-2.0.0-beta4\AndroidManifest.xml:9:5-20
 MERGED from [com.android.support:design:28.0.0] C:\Users\korea\.gradle\caches\transforms-2\files-2.1\e3decd5bf9fbc8536b88bb6c57360e20\design-28.0.0\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:design:28.0.0] C:\Users\korea\.gradle\caches\transforms-2\files-2.1\e3decd5bf9fbc8536b88bb6c57360e20\design-28.0.0\AndroidManifest.xml:22:5-20
 MERGED from [android.arch.lifecycle:extensions:1.1.1] C:\Users\korea\.gradle\caches\transforms-2\files-2.1\0319b019d62b322e5e3e8b69d1380784\extensions-1.1.1\AndroidManifest.xml:22:5-28:19
@@ -139,7 +139,7 @@ category#android.intent.category.MULTIWINDOW_LAUNCHER
 ADDED from C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:30:17-89
 	android:name
 		ADDED from C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:30:27-86
-activity#com.modelviewer.MainActivity
+activity#com.modelviewer.SecondActivity
 ADDED from C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:33:9-37:74
 	android:screenOrientation
 		ADDED from C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:35:13-50
@@ -148,15 +148,15 @@ ADDED from C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManif
 	android:configChanges
 		ADDED from C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:36:13-48
 	android:name
-		ADDED from C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:34:13-56
+		ADDED from C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:34:13-58
 uses-sdk
 INJECTED from C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml
 INJECTED from C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml
 MERGED from [:OpenNIForAndroid] C:\Users\korea\StudioProjects\modelviewer3d\OpenNIForAndroid\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [:OpenNIForAndroid] C:\Users\korea\StudioProjects\modelviewer3d\OpenNIForAndroid\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support.constraint:constraint-layout:2.0.0-beta3] C:\Users\korea\.gradle\caches\transforms-2\files-2.1\cfd8d0ba7df86300aa4cdfc1e95c4d98\constraint-layout-2.0.0-beta3\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support.constraint:constraint-layout:2.0.0-beta3] C:\Users\korea\.gradle\caches\transforms-2\files-2.1\cfd8d0ba7df86300aa4cdfc1e95c4d98\constraint-layout-2.0.0-beta3\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:2.0.0-beta4] C:\Users\korea\.gradle\caches\transforms-2\files-2.1\5b043de63029f121da17deed147c51b4\constraint-layout-2.0.0-beta4\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:2.0.0-beta4] C:\Users\korea\.gradle\caches\transforms-2\files-2.1\5b043de63029f121da17deed147c51b4\constraint-layout-2.0.0-beta4\AndroidManifest.xml:5:5-7:41
 MERGED from [com.android.support:design:28.0.0] C:\Users\korea\.gradle\caches\transforms-2\files-2.1\e3decd5bf9fbc8536b88bb6c57360e20\design-28.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:design:28.0.0] C:\Users\korea\.gradle\caches\transforms-2\files-2.1\e3decd5bf9fbc8536b88bb6c57360e20\design-28.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:mediarouter-v7:28.0.0] C:\Users\korea\.gradle\caches\transforms-2\files-2.1\934b93246aefd01a74000b93cc612c1e\mediarouter-v7-28.0.0\AndroidManifest.xml:20:5-44

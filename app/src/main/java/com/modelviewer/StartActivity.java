@@ -1,16 +1,17 @@
 
 package com.modelviewer;
 
-import android.app.Activity;
 import android.app.AlertDialog;
+import android.arch.lifecycle.Observer;
+import android.arch.lifecycle.ViewModelProviders;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.os.Environment;
+import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -26,20 +27,21 @@ import org.openni.android.OpenNIHelper;
 import org.openni.android.OpenNIView;
 
 import java.text.DecimalFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 import c0m.WildCom.Project.R;
 import geometrypack.Vector;
 import patterns.cluster.DoubleArray;
+import smartscaledatabase.PigTable;
+import smartscaledatabase.PigViewModel;
 import utilities.Utilities;
 
-/* TODO - 1
-1- Change the MainActivity (Second Activity) and design it
-2- Run the app wit the design only
-3- understand about android room
-*/
-public class StartActivity extends Activity implements OpenNIHelper.DeviceOpenListener {
+
+public class StartActivity extends AppCompatActivity implements OpenNIHelper.DeviceOpenListener {
 
 	private static final String TAG = "Viewer";
 	private OpenNIHelper mOpenNIHelper;
@@ -51,10 +53,18 @@ public class StartActivity extends Activity implements OpenNIHelper.DeviceOpenLi
 	private VideoStream mSecondStream;
 	private OpenNIView mFrameView;
 	private TextView mStatusLine;
+	private TextView weightPreview;
 	private int flag=0;
-	private String name = "output";
+	private int count;
+	private int priority;
+	private int pigNumber;
+	private String pigNum;
+	private List<PigTable> pigTables = new ArrayList<>();
+	private SimpleDateFormat formatter = new SimpleDateFormat("YYYY-MM-dd HH:SS", Locale.getDefault());
+	private String currentDateAndTime = formatter.format(new Date());
+	private PigTable pigTable = new PigTable(0, 0, 0, "");
 	double f = 0.0;
-	TextView exec_time;
+	private PigViewModel pigViewModel;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		mOpenNIHelper = new OpenNIHelper(this);
@@ -62,31 +72,37 @@ public class StartActivity extends Activity implements OpenNIHelper.DeviceOpenLi
 		OpenNI.setLogMinSeverity(0);
 		OpenNI.initialize();
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_simple_viewer);
+		setContentView(R.layout.start_activity);
 		mFrameView =  findViewById(R.id.frameView);
 		mStatusLine =  findViewById(R.id.status_line);
+		weightPreview = findViewById(R.id.textView_weight_preview);
 		Button scan = findViewById(R.id.scanButton);
-		final Button displayBtn = findViewById(R.id.visualizeButton);
+		Button displayBtn = findViewById(R.id.visualizeButton);
 
-		scan.setOnClickListener((View view) -> new OnClickListener() {
+		pigViewModel = ViewModelProviders.of(StartActivity.this).get(PigViewModel.class);
+		pigViewModel.getItemCuount().observe(this, new Observer<Integer>() {
 			@Override
-			public void onClick(View view) {
-				flag = 1;
-				name = "output";
+			public void onChanged(@Nullable Integer integer) {
+				count = integer;
+				Log.d(TAG, "On change count " + count);
 			}
-			});
-		scan.setOnClickListener((View view) -> setFlagandName());
+		});
+
+		scan.setOnClickListener((View view) -> setFlag());
 
 		displayBtn.setOnClickListener((View v) -> startSecondActivity());
 		}
 
-		private void setFlagandName(){
+		private void setFlag(){
 		flag = 1;
-		name = "output";
+		priority = count;
+			Log.d(TAG, "On Scan Clicked Priority Value " + priority);
+			pigNumber = priority;
 		}
 
+
 	private void startSecondActivity(){
-		Intent data = new Intent(StartActivity.this, MainActivity.class);
+		Intent data = new Intent(StartActivity.this, SecondActivity.class);
 		startActivity(data);
 	}
 
@@ -136,7 +152,7 @@ public class StartActivity extends Activity implements OpenNIHelper.DeviceOpenLi
 	private void device_initialization(Device aDevice) {
 
 		VideoMode vm = new VideoMode();
-		vm.setResolution(320*4/2,240*4/2);
+		vm.setResolution(320/2,240/2);
 	    vm.setFps( 30 );
 	    vm.setPixelFormat(PixelFormat.DEPTH_1_MM);
 		mDeviceOpenPending = false;
@@ -150,7 +166,7 @@ public class StartActivity extends Activity implements OpenNIHelper.DeviceOpenLi
 			
 		} catch (RuntimeException e) {
 			showAlertAndExit("Failed to open stream: " + e.getMessage());
-			return;
+
 		}
 	}
 	
@@ -165,45 +181,37 @@ public class StartActivity extends Activity implements OpenNIHelper.DeviceOpenLi
 			public void run() {
 				List<Vector> Cloud= new ArrayList<Vector>();
 				List<DoubleArray> clean = new ArrayList<>();
+				double pigWeight;
+				String weightValue;
+				int count = pigTables.size();
+
+
 				while (mShouldRun) {
 					VideoFrameRef frame = null;
-					double ff = 0;
-					DecimalFormat df = new DecimalFormat("0.00");
 					try {
 						frame = mStream.readFrame();
-						// Request rendering of the current OpenNI frame
 						mFrameView.setBaseColor(Color.GRAY);
 						mFrameView.update(frame);
 						mStream.setMirroringEnabled(false);
 						if (flag==1) {
-							
-//							File file = new File(Environment.getExternalStorageDirectory().getPath(),"21.xyz");
-//							InputStream stream = new FileInputStream(file);
-//							Cloud = Utilities.ReadXYZ(stream);
 							Cloud = Utilities.frameTocloud(frame, mStream);
 							Cloud = Utilities.sample(0.7, Cloud);
 							clean = Utilities.outliersRemoval_opt(Cloud);
 							clean = Utilities.align_opt(clean);
-//							Utilities.SaveXYZ(clean,Environment.getExternalStorageDirectory().getAbsolutePath()+"/"+"21_clean");
-							Utilities.SaveXYZ(clean,Environment.getExternalStorageDirectory().getAbsolutePath()+"/"+name);
-//This is for test							
+							Cloud = Utilities.cloudArrayToVector(clean);
+							pigWeight = Utilities.estimateWeight(Cloud);
 				            f = frame.getTimestamp() / 1e6;
-							flag=-1;
+				            weightValue = new DecimalFormat("##.#").format(pigWeight);
+							updateLabel(String.format("Frame Index: %,d | Timestamp: %.6f seconds", frame.getFrameIndex(), frame.getTimestamp() / 1e6), (weightValue + " KG"));
+							pigWeight = Math.round(pigWeight);
+							pigViewModel.insert(new PigTable(pigNumber, pigWeight, priority, currentDateAndTime));
+							flag = 0;
 							}
-						if (flag==-1) {
-							 ff = (double) (frame.getTimestamp() / 1e6);
-//							 exec_time.setText(df.format(ff-f)+" seconds");
-							 exec_time.setText(" seconds");
-							 flag = 0;
-							 }			
-						updateLabel(String.format("Frame Index: %,d | Timestamp: %.6f seconds", frame.getFrameIndex(), frame.getTimestamp() / 1e6));
-					} catch (Exception e) {
+						} catch (Exception e) {
 						Log.e(TAG, "Failed reading frame: " + e);
 					}
-				
 				}
-			};
-			
+			}
 		};
 		mMainLoopThread.start();
 	}
@@ -231,13 +239,15 @@ public class StartActivity extends Activity implements OpenNIHelper.DeviceOpenLi
 		mStatusLine.setText(R.string.waiting_for_frames);
 	}
 	
-	private void updateLabel(final String message) {
+	private void updateLabel(final String message, final String weightValue) {
 		runOnUiThread(new Runnable() {
 			public void run() {
-				mStatusLine.setText(message);								
+				mStatusLine.setText(message);
+				weightPreview.setText(weightValue);
 			}
 		});
 	}
+
 
 	@Override
 	public void onDeviceOpenFailed(String uri) {
@@ -251,6 +261,7 @@ public class StartActivity extends Activity implements OpenNIHelper.DeviceOpenLi
 		Log.d(TAG, "onPause");
 
 		super.onPause();
+
 
 		if (mDeviceOpenPending)
 			return;

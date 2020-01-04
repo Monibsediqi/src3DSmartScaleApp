@@ -24,7 +24,7 @@ import java.util.NoSuchElementException;
 
 /**
  * Provides string names values for all pixel format type codes. <BR>
- * <BR>
+ *  * <BR>
  * 
  */
 public enum PixelFormat {

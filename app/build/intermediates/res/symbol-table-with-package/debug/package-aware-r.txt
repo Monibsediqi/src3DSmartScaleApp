@@ -354,6 +354,7 @@ attr labelVisibilityMode
 attr lastBaselineToBottomHeight
 attr layout
 attr layoutDescription
+attr layoutDuringTransition
 attr layoutManager
 attr layout_anchor
 attr layout_anchorGravity
@@ -1515,10 +1516,12 @@ id group_divider
 id groups
 id home
 id homeAsUp
+id honorRequest
 id icon
 id icon_group
 id ifRoom
 id ignore
+id ignoreRequest
 id image
 id imageView8
 id info
@@ -1687,6 +1690,7 @@ id text2
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
+id textView_weight_preview
 id text_input_password_toggle
 id text_view_10_recent_pig
 id text_view_date_1
@@ -1781,8 +1785,6 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
-layout activity_main
-layout activity_simple_viewer
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
 layout design_layout_snackbar
@@ -1832,6 +1834,8 @@ layout pig_item
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
+layout seond_activity
+layout start_activity
 layout support_simple_spinner_dropdown_item
 mipmap ic_launcher
 mipmap ic_launcher_foreground
@@ -1883,19 +1887,16 @@ string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
 string app_name
 string appbar_scrolling_view_behavior
-string back_button
 string bottom_sheet_behavior
-string capturer_date
 string character_counter_content_description
 string character_counter_pattern
 string date_time
+string days_left
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
-string feed_amount
+string graph_title
 string hide_bottom_view_on_scroll_behavior
-string img_target
-string list_view_title
-string load_sample
+string list_of_scanned_pigs
 string mr_button_content_description
 string mr_cast_button_connected
 string mr_cast_button_connecting
@@ -1921,27 +1922,29 @@ string mr_dialog_route_header
 string mr_system_route_name
 string mr_user_route_category_name
 string mtrl_chip_close_icon_content_description
-string nav_camera
-string nav_flash
-string nav_help
-string nav_setting
-string nav_time
-string nav_view
+string opt_seeling_pt
 string password_toggle_content_description
 string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
-string pig_detail_id
+string pig_details
 string pig_name
-string pig_view_detail
 string pig_weight
 string read_permission_failed
+string ready_to_sell
+string req_food
+string scan_btn
+string scan_date
 string search_menu_title
-string selling_point
 string status_bar_notification_info_overflow
+string to_sell_food
+string to_sell_kg
 string visualize
 string waiting_for_frames
+string wight_left
+string x_axis
+string y_axis
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog
@@ -2526,7 +2529,7 @@ styleable MockView mock_diagonalsColor mock_label mock_labelBackgroundColor mock
 styleable Motion animate_relativeTo drawPath motionPathRotate motionStagger pathMotionArc transitionEasing
 styleable MotionHelper onHide onShow
 styleable MotionLayout applyMotionScene currentState layoutDescription motionDebug motionProgress showPaths
-styleable MotionScene defaultDuration
+styleable MotionScene defaultDuration layoutDuringTransition
 styleable MotionTelltales telltales_tailColor telltales_tailScale telltales_velocityMode
 styleable NavigationView android_background android_fitsSystemWindows android_maxWidth elevation headerLayout itemBackground itemHorizontalPadding itemIconPadding itemIconTint itemTextAppearance itemTextColor menu
 styleable OnClick clickAction targetId
@@ -2554,7 +2557,7 @@ styleable TextInputLayout android_textColorHint android_hint boxBackgroundColor 
 styleable ThemeEnforcement android_textAppearance enforceMaterialTheme enforceTextAppearance
 styleable Toolbar android_gravity android_minHeight buttonGravity collapseContentDescription collapseIcon contentInsetEnd contentInsetEndWithActions contentInsetLeft contentInsetRight contentInsetStart contentInsetStartWithNavigation logo logoDescription maxButtonHeight navigationContentDescription navigationIcon popupTheme subtitle subtitleTextAppearance subtitleTextColor title titleMargin titleMarginBottom titleMarginEnd titleMarginStart titleMarginTop titleMargins titleTextAppearance titleTextColor
 styleable Transform android_transformPivotX android_transformPivotY android_translationX android_translationY android_scaleX android_scaleY android_rotation android_rotationX android_rotationY android_translationZ android_elevation pivotAnchor pivotX pivotY
-styleable Transition android_id autoTransition constraintSetEnd constraintSetStart duration motionInterpolator staggered transitionDisable
+styleable Transition android_id autoTransition constraintSetEnd constraintSetStart duration layoutDuringTransition motionInterpolator pathMotionArc staggered transitionDisable
 styleable Variant constraints region_heightLessThan region_heightMoreThan region_widthLessThan region_widthMoreThan
 styleable View android_theme android_focusable paddingEnd paddingStart theme
 styleable ViewBackgroundHelper android_background backgroundTint backgroundTintMode

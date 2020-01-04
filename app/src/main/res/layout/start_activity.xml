@@ -13,12 +13,35 @@
         android:gravity="center"
         android:text="@string/waiting_for_frames" />
 
-    <org.openni.android.OpenNIView
-        android:id="@+id/frameView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/status_line"
-        android:layout_centerHorizontal="true" />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/status_line">
+
+        <org.openni.android.OpenNIView
+            android:id="@+id/frameView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/status_line"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/textView_weight_preview"
+            android:layout_width="wrap_content"
+            android:layout_height="81dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="362dp"
+            android:layout_marginLeft="362dp"
+            android:layout_marginTop="289dp"
+            android:layout_marginEnd="366dp"
+            android:layout_marginRight="366dp"
+            android:layout_marginBottom="256dp"
+            android:text="0.0"
+            android:textColor="@color/red"
+            android:textSize="36sp" />
+
+    </FrameLayout>
+
 
     <Button
         android:id="@+id/visualizeButton"
@@ -37,7 +60,9 @@
         android:layout_alignParentRight="true"
         android:layout_centerInParent="true"
         android:layout_marginRight="14dp"
-        android:text="Scan" />
+        android:text="@string/scan_btn" />
+
+
 
 
 </RelativeLayout>

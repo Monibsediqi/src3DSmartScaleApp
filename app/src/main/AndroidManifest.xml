@@ -31,7 +31,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.modelviewer.MainActivity"
+            android:name="com.modelviewer.SecondActivity"
             android:screenOrientation="landscape"
             android:configChanges="orientation"
             android:parentActivityName="com.modelviewer.StartActivity" />

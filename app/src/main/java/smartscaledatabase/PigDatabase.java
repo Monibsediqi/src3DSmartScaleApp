@@ -49,9 +49,9 @@ abstract class PigDatabase extends RoomDatabase {
         }
         @Override
         protected Void doInBackground(Void... voids) {
-            pigDao.insert(new PigTable("Pig 001", 90, 0, 212311));
-            pigDao.insert(new PigTable("Pig 002", 95, 1, 123122));
-            pigDao.insert(new PigTable("Pig 003", 90, 2, 123123));
+//            pigDao.insert(new PigTable("Pig 001", 90, 0, "212311"));
+//            pigDao.insert(new PigTable("Pig 002", 95, 1, "123122"));
+//            pigDao.insert(new PigTable("Pig 003", 90, 2, "123123"));
 
             return null;
         }

@@ -56,7 +56,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
-                    android:text="@string/pig_view_detail"
+                    android:text="@string/list_of_scanned_pigs"
                     android:textColor="@color/colorIconText"
                     android:textSize="28sp"
                     android:textStyle="bold" />
@@ -81,7 +81,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_weight="1"
-                        android:text="@string/capturer_date"
+                        android:text="@string/scan_date"
                         android:textColor="@color/colorIconText"
                         android:textSize="22sp" />
 
@@ -109,7 +109,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_weight="1"
-                        android:text="Weight ShortFall:"
+                        android:text="@string/to_sell_kg"
                         android:textColor="@color/colorIconText"
                         android:textSize="22sp" />
 
@@ -137,7 +137,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_weight="1"
-                        android:text="Selling Point:"
+                        android:text="@string/opt_seeling_pt"
                         android:textColor="@color/colorIconText"
                         android:textSize="22sp" />
 
@@ -147,7 +147,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_weight="1"
-                        android:text="115 Kg"
+                        android:text=""
                         android:textColor="@color/colorIconText"
                         android:textSize="22sp"
                         android:textStyle="bold" />
@@ -164,7 +164,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_weight="1"
-                        android:text="Ready for Sale:"
+                        android:text="@string/to_sell_food"
                         android:textColor="@color/colorIconText"
                         android:textSize="22sp" />
 
@@ -191,7 +191,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_weight="1"
-                        android:text="Food Required"
+                        android:text="@string/req_food"
                         android:textColor="@color/colorIconText"
                         android:textSize="22sp" />
 
@@ -234,7 +234,7 @@
             android:background="@color/colorPrimaryDark"
             android:gravity="center"
             android:padding="5dp"
-            android:text="List of Scanned Pigs"
+            android:text="@string/list_of_scanned_pigs"
             android:textColor="@color/colorIconText"
             android:textSize="16sp"
             android:textStyle="bold" />

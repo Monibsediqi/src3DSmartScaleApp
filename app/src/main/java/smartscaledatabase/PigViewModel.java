@@ -27,6 +27,7 @@ public class PigViewModel extends AndroidViewModel {
     public PigTable getPig(int priority) {
         return pigRepository.getPig(priority);
     }
+    public LiveData<Integer> getItemCuount(){return pigRepository.getItemCount();}
 
 
 

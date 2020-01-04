@@ -1,8 +1,26 @@
 <resources>
-    <string name="app_name">3D Sel</string>
-    <string name="load_sample">Load sample</string>
-    <string name="read_permission_failed">Please allow read permission to open model files.</string>
-    <string name="waiting_for_frames">Waiting for frames&#8230;</string>
+    <string name="app_name" translatable="false">3D Sel</string>
+    <string name="read_permission_failed" translatable="false">Please allow read permission to open model files.</string>
+    <string name="waiting_for_frames" translatable="false">Waiting for frames&#8230;</string>
     <string name="visualize">Visualize</string>
+
+    <string name="pig_name">Pig Name</string>
+    <string name="pig_weight"> Pig Weight</string>
+    <string name="days_left"> Days Left</string>
+    <string name="wight_left"> Left</string>
+
+    <string name="scan_btn">Scan</string>
+    <string name="scan_date">Scan Date</string>
     <string name="date_time">date and time</string>
+    <string name="graph_title">Pig Growth</string>
+    <string name="y_axis">Weight</string>
+    <string name="x_axis">Days</string>
+    <string name="pig_details">Details of Pig </string>
+    <string name="to_sell_kg">To Sell </string>
+    <string name="opt_seeling_pt">Optimal Selling Point</string>
+    <string name="to_sell_food">To Sell</string>
+    <string name="req_food">Required Food</string>
+    <string name="list_of_scanned_pigs">Scanned Pigs</string>
+    <string name="ready_to_sell">Yes</string>
+
 </resources>

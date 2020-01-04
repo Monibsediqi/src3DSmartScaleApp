@@ -120,10 +120,6 @@
         "source": "C:\\Users\\korea\\.gradle\\caches\\transforms-2\\files-2.1\\934b93246aefd01a74000b93cc612c1e\\mediarouter-v7-28.0.0\\res\\drawable-xhdpi-v4\\ic_media_play_dark.png"
     },
     {
-        "merged": "C:\\Users\\korea\\StudioProjects\\modelviewer3d\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_simple_viewer.xml.flat",
-        "source": "C:\\Users\\korea\\StudioProjects\\modelviewer3d\\app\\src\\main\\res\\layout\\activity_simple_viewer.xml"
-    },
-    {
         "merged": "C:\\Users\\korea\\StudioProjects\\modelviewer3d\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_ic_mr_button_connected_23_dark.png.flat",
         "source": "C:\\Users\\korea\\.gradle\\caches\\transforms-2\\files-2.1\\934b93246aefd01a74000b93cc612c1e\\mediarouter-v7-28.0.0\\res\\drawable-xhdpi-v4\\ic_mr_button_connected_23_dark.png"
     },
@@ -1544,10 +1540,6 @@
         "source": "C:\\Users\\korea\\.gradle\\caches\\transforms-2\\files-2.1\\934b93246aefd01a74000b93cc612c1e\\mediarouter-v7-28.0.0\\res\\drawable-xxhdpi-v4\\ic_vol_type_tv_dark.png"
     },
     {
-        "merged": "C:\\Users\\korea\\StudioProjects\\modelviewer3d\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
-        "source": "C:\\Users\\korea\\StudioProjects\\modelviewer3d\\app\\src\\main\\res\\layout\\activity_main.xml"
-    },
-    {
         "merged": "C:\\Users\\korea\\StudioProjects\\modelviewer3d\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_ic_media_play_light.png.flat",
         "source": "C:\\Users\\korea\\.gradle\\caches\\transforms-2\\files-2.1\\934b93246aefd01a74000b93cc612c1e\\mediarouter-v7-28.0.0\\res\\drawable-mdpi-v4\\ic_media_play_light.png"
     },
@@ -2416,6 +2408,10 @@
         "source": "C:\\Users\\korea\\.gradle\\caches\\transforms-2\\files-2.1\\934b93246aefd01a74000b93cc612c1e\\mediarouter-v7-28.0.0\\res\\drawable-xhdpi-v4\\ic_mr_button_connected_26_dark.png"
     },
     {
+        "merged": "C:\\Users\\korea\\StudioProjects\\modelviewer3d\\app\\build\\intermediates\\res\\merged\\debug\\layout_seond_activity.xml.flat",
+        "source": "C:\\Users\\korea\\StudioProjects\\modelviewer3d\\app\\src\\main\\res\\layout\\seond_activity.xml"
+    },
+    {
         "merged": "C:\\Users\\korea\\StudioProjects\\modelviewer3d\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_ic_mr_button_connected_13_dark.png.flat",
         "source": "C:\\Users\\korea\\.gradle\\caches\\transforms-2\\files-2.1\\934b93246aefd01a74000b93cc612c1e\\mediarouter-v7-28.0.0\\res\\drawable-xhdpi-v4\\ic_mr_button_connected_13_dark.png"
     },
@@ -2538,6 +2534,10 @@
     {
         "merged": "C:\\Users\\korea\\StudioProjects\\modelviewer3d\\app\\build\\intermediates\\res\\merged\\debug\\drawable_pig_test.jpg.flat",
         "source": "C:\\Users\\korea\\StudioProjects\\modelviewer3d\\app\\src\\main\\res\\drawable\\pig_test.jpg"
+    },
+    {
+        "merged": "C:\\Users\\korea\\StudioProjects\\modelviewer3d\\app\\build\\intermediates\\res\\merged\\debug\\layout_start_activity.xml.flat",
+        "source": "C:\\Users\\korea\\StudioProjects\\modelviewer3d\\app\\src\\main\\res\\layout\\start_activity.xml"
     },
     {
         "merged": "C:\\Users\\korea\\StudioProjects\\modelviewer3d\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_ic_mr_button_connecting_09_dark.png.flat",

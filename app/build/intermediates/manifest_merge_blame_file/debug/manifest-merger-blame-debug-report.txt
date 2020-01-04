@@ -73,8 +73,8 @@
 41        </activity>
 42        <activity
 42-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:33:9-37:74
-43            android:name="com.modelviewer.MainActivity"
-43-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:34:13-56
+43            android:name="com.modelviewer.SecondActivity"
+43-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:34:13-58
 44            android:configChanges="orientation"
 44-->C:\Users\korea\StudioProjects\modelviewer3d\app\src\main\AndroidManifest.xml:36:13-48
 45            android:parentActivityName="com.modelviewer.StartActivity"

@@ -25,10 +25,13 @@ class PigRepository {
     PigTable getPig(int priority) {
         return pigDatabase.pigDao().getPig(priority);
     }
+    public LiveData<Integer> getItemCount (){return pigDao.getItemCount();}
+
 
     void insert(PigTable pigTable) {
         new InsertPigTableAsyncTask(pigDao).execute(pigTable);
     }
+
 
     private static class InsertPigTableAsyncTask extends AsyncTask<PigTable, Void, Void> {
         private PigDao pigDao;

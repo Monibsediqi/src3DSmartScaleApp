@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="date_time">날짜 및 시간</string>
+    <string name="graph_title">돼지 생장</string>
+    <string name="list_of_scanned_pigs">스캔한 돼지</string>
+    <string name="opt_seeling_pt">최적판매</string>
+    <string name="pig_details">세부 사항 돼지</string>
+    <string name="pig_name">돼지 이름</string>
+    <string name="pig_weight">돼지 체중</string>
+    <string name="req_food">필수 식품</string>
+    <string name="scan_btn">스캔</string>
+    <string name="scan_date">스캔 날짜</string>
+    <string name="to_sell_food">팔다</string>
+    <string name="to_sell_kg">팔다</string>
+    <string name="visualize">보다</string>
+    <string name="x_axis">일당</string>
+    <string name="y_axis">체중</string>
+    <string name="days_left">일 남음</string>
+    <string name="wight_left">남음</string>
+    <string name="ready_to_sell">네</string>
+</resources>
